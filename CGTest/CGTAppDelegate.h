@@ -8,8 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CGTAppDelegate : NSObject <NSApplicationDelegate>
+@interface CGTAppDelegate : NSObject <NSApplicationDelegate> {
+    CFRunLoopSourceRef ref;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSButton *button;
+
+- (IBAction)foo:(id)sender;
+- (void)setButtonValue:(NSString *)value;
 
 @end
